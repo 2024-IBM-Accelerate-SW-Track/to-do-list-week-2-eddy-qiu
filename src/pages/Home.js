@@ -14,7 +14,7 @@ class Home extends Component {
   // the addTodo function simply creates a new array that includes the user submitted todo item and then
   // updates the state with the new list.
   addTodo = (todo) => {
-    if (this.state.todos.find(todo)) {
+    if (this.state.todos.find((item) => item.content === todo.content)) {
       return;
     }
     else {
